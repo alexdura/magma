@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PROJECTS=(libpng sqlite3 openssl)
+declare -a PROJECTS=(libpng sqlite3 openssl)
 #PROJECTS=(openssl)
 
 prepare_project() {
@@ -29,7 +29,8 @@ prepare_project() {
     popd
 }
 
-for p in $PROJECTS ; do
+for p in "${PROJECTS[@]}" ; do
     echo "Preparing project $p"
     prepare_project "$p"
+    echo "Done preparing project $p"
 done
