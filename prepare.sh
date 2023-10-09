@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-PROJECTS=(libpng)
+PROJECTS=(libpng sqlite3 openssl)
+#PROJECTS=(openssl)
 
 prepare_project() {
     proj=$1
@@ -10,6 +11,7 @@ prepare_project() {
     export TARGET=$proj_dir
     export OUT=$TARGET/out
     export CC="gcc"
+    export CXX="g++"
 
     mkdir -p $OUT
 
