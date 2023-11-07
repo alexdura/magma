@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-declare -a PROJECTS=(libpng sqlite3 openssl)
-#PROJECTS=(openssl)
+declare -a PROJECTS=(libpng sqlite3 openssl libtiff php libxml2)
+# PROJECTS=(sqlite3)
+# PROJECTS=(libtiff ffmpeg)
+# PROJECTS=(php libxml2)
 
 prepare_project() {
     proj=$1
